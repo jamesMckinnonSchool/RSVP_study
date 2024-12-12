@@ -98,8 +98,7 @@
     
                     // If all words are displayed, show the end message
                     if (index >= words.length) {
-                        container.innerHTML = "The End!";
-                        return;
+                        container.innerHTML = "The End! You may now close this tab.";
                     }
                 }
     
@@ -113,7 +112,10 @@
     
         // Display the "The story is about to start" message for 10 seconds
         function showIntroMessage() {
-            container.innerHTML = "The story is about to start.";
+            container.innerHTML = `
+                <p>The story is about to start.</p>
+                <p><small><em>"The Tale of Peter Rabbit"</em> by Beatrix Potter, available on <a href="https://freekidsbooks.org" target="_blank" style="color: blue;">FreeKidsBooks.org</a>.</small></p>
+            `;
             setTimeout(displayWords, 10000);
         }
     
