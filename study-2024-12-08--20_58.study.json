@@ -1,0 +1,144 @@
+{
+  "components": {
+    "1": {
+      "id": "1",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "5"
+      ],
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "",
+          "code": ""
+        }
+      ],
+      "title": "RSVP Practice",
+      "_tab": "Content"
+    },
+    "5": {
+      "id": "5",
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text"
+        },
+        {
+          "required": true,
+          "type": "html",
+          "content": "<div id=\"instruction-container\" style=\"text-align: center; font-size: 24px; margin-top: 50px;\">\n    <p>Click start when you are ready.</p>\n    <!-- Start Button -->\n    <button id=\"startButton\" style=\"font-size: 18px; padding: 15px 30px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;\">\n        Start\n    </button>\n</div>\n\n<!-- Container for displaying the words -->\n<div id=\"word_display\" style=\"font-size: 28px; text-align: center; margin-top: 50px;\"></div>\n\n"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": [],
+      "responses": [
+        {
+          "label": "",
+          "event": "",
+          "target": "",
+          "filter": ""
+        }
+      ],
+      "parameters": [
+        {
+          "name": "",
+          "value": "",
+          "type": "string"
+        }
+      ],
+      "messageHandlers": [
+        {
+          "title": "",
+          "message": "run",
+          "code": "    // List of words to display\n    const words = [\"Once\", \"upon\", \"a\", \"time\", \"there\", \"were\", \"four\", \"little\", \"Rabbits,\", \"and\", \"their\", \"names\", \"were–\", \"Flopsy,\", \"Mopsy,\", \"Cotton-tail,\", \"and\", \"Peter.\", \"They\", \"lived\", \"with\", \"their\", \"Mother\", \"in\", \"a\", \"sand-bank,\", \"underneath\", \"the\", \"root\", \"of\", \"a\", \"very\", \"big\", \"fir-tree.\", \"Now\", \"my\", \"dears\", \"said\", \"old\", \"Mrs.\", \"Rabbit,\", \"one\", \"morning,\", \"you\", \"may\", \"go\", \"into\", \"the\", \"fields\", \"or\", \"down\", \"the\", \"lane,\", \"but\", \"don't\", \"go\", \"into\", \"Mr.\", \"McGregor's\", \"garden:\", \"your\", \"Father\", \"had\", \"an\", \"accident\", \"there;\", \"he\", \"was\", \"put\", \"in\", \"a\", \"pie\", \"by\", \"Mrs.\", \"McGregor.\", \"Now\", \"run\", \"along,\", \"and\", \"don't\", \"get\", \"into\", \"mischief.\", \"I\", \"am\", \"going\", \"out.\", \"Then\", \"old\", \"Mrs.\", \"Rabbit\", \"took\", \"a\", \"basket\", \"and\", \"her\", \"umbrella,\", \"and\", \"went\", \"through\", \"the\", \"wood\", \"to\", \"the\", \"baker's.\", \"She\", \"bought\", \"a\", \"loaf\", \"of\", \"brown\", \"bread\", \"and\", \"five\", \"currant\", \"buns.\", \"Flopsy,\", \"Mopsy,\", \"and\", \"Cottontail,\", \"who\", \"were\", \"good\", \"little\", \"bunnies,\", \"went\", \"down\", \"the\", \"lane\", \"to\", \"gather\", \"blackberries:\", \"But\", \"Peter,\", \"who\", \"was\", \"very\", \"naughty,\", \"ran\", \"straight\", \"away\", \"to\", \"Mr.\", \"McGregor's\", \"garden,\", \"and\", \"squeezed\", \"under\", \"the\", \"gate!\", \"First\", \"he\", \"ate\", \"some\", \"lettuces\", \"and\", \"some\", \"French\", \"beans;\", \"and\", \"then\", \"he\", \"ate\", \"some\", \"radishes;\", \"And\", \"then,\", \"feeling\", \"rather\", \"sick,\", \"he\", \"went\", \"to\", \"look\", \"for\", \"some\", \"parsley.\", \"But\", \"round\", \"the\", \"end\", \"of\", \"a\", \"cucumber\", \"frame,\", \"whom\", \"should\", \"he\", \"meet\", \"but\", \"Mr.\", \"McGregor!\", \"Mr.\", \"McGregor\", \"was\", \"on\", \"his\", \"hands\", \"and\", \"knees\", \"planting\", \"out\", \"young\", \"cabbages,\", \"but\", \"he\", \"jumped\", \"up\", \"and\", \"ran\", \"after\", \"Peter,\", \"waving\", \"a\", \"rake\", \"and\", \"calling\", \"out,\", \"'Stop\", \"thief!'\", \"Peter\", \"was\", \"most\", \"dreadfully\", \"frightened;\", \"he\", \"rushed\", \"all\", \"over\", \"the\", \"garden,\", \"for\", \"he\", \"had\", \"forgotten\", \"the\", \"way\", \"back\", \"to\", \"the\", \"gate.\", \"He\", \"lost\", \"one\", \"of\", \"his\", \"shoes\", \"among\", \"the\", \"cabbages,\", \"and\", \"the\", \"other\", \"shoe\", \"amongst\", \"the\", \"potatoes.\", \"After\", \"losing\", \"them,\", \"he\", \"ran\", \"on\", \"four\", \"legs\", \"and\", \"went\", \"faster,\", \"so\", \"that\", \"I\", \"think\", \"he\", \"might\", \"have\", \"got\", \"away\", \"altogether\", \"if\", \"he\", \"had\", \"not\", \"unfortunately\", \"run\", \"into\", \"a\", \"gooseberry\", \"net,\", \"and\", \"got\", \"caught\", \"by\", \"the\", \"large\", \"buttons\", \"on\", \"his\", \"jacket.\", \"It\", \"was\", \"a\", \"blue\", \"jacket\", \"with\", \"brass\", \"buttons,\", \"quite\", \"new.\", \"Peter\", \"gave\", \"himself\", \"up\", \"for\", \"lost,\", \"and\", \"shed\", \"big\", \"tears;\", \"but\", \"his\", \"sobs\", \"were\", \"overheard\", \"by\", \"some\", \"friendly\", \"sparrows,\", \"who\", \"flew\", \"to\", \"him\", \"in\", \"great\", \"excitement,\", \"and\", \"implored\", \"him\", \"to\", \"exert\", \"himself.\", \"Mr.\", \"McGregor\", \"came\", \"up\", \"with\", \"a\", \"sieve,\", \"which\", \"he\", \"intended\", \"to\", \"pop\", \"upon\", \"the\", \"top\", \"of\", \"Peter;\", \"but\", \"Peter\", \"wriggled\", \"out\", \"just\", \"in\", \"time,\", \"leaving\", \"his\", \"jacket\", \"behind\", \"him.\", \"And\", \"rushed\", \"into\", \"the\", \"tool-shed,\", \"and\", \"jumped\", \"into\", \"a\", \"can.\", \"It\", \"would\", \"have\", \"been\", \"a\", \"beautiful\", \"thing\", \"to\", \"hide\", \"in,\", \"if\", \"it\", \"had\", \"not\", \"had\", \"so\", \"much\", \"water\", \"in\", \"it.\", \"Mr.\", \"McGregor\", \"was\", \"quite\", \"sure\", \"that\", \"Peter\", \"was\", \"somewhere\", \"in\", \"the\", \"tool-shed,\", \"perhaps\", \"hidden\", \"underneath\", \"a\", \"flower-pot.\", \"He\", \"began\", \"to\", \"turn\", \"them\", \"over\", \"carefully,\", \"looking\", \"under\", \"each.\", \"Presently\", \"Peter\", \"sneezed--'Kertyschoo!'\", \"Mr.\", \"McGregor\", \"was\", \"after\", \"him\", \"in\", \"no\", \"time.\", \"And\", \"tried\", \"to\", \"put\", \"his\", \"foot\", \"upon\", \"Peter,\", \"who\", \"jumped\", \"out\", \"of\", \"a\", \"window,\", \"upsetting\", \"three\", \"plants.\", \"The\", \"window\", \"was\", \"too\", \"small\", \"for\", \"Mr.\", \"McGregor,\", \"and\", \"he\", \"was\", \"tired\", \"of\", \"running\", \"after\", \"Peter.\", \"He\", \"went\", \"back\", \"to\", \"his\", \"work.\", \"Peter\", \"sat\", \"down\", \"to\", \"rest;\", \"he\", \"was\", \"out\", \"of\", \"breath\", \"and\", \"trembling\", \"with\", \"fright,\", \"and\", \"he\", \"had\", \"not\", \"the\", \"least\", \"idea\", \"which\", \"way\", \"to\", \"go.\", \"Also\", \"he\", \"was\", \"very\", \"damp\", \"with\", \"sitting\", \"in\", \"that\", \"can.\", \"After\", \"a\", \"time\", \"he\", \"began\", \"to\", \"wander\", \"about,\", \"going\", \"lippity--lippity--not\", \"very\", \"fast,\", \"and\", \"looking\", \"all\", \"round.\", \"He\", \"found\", \"a\", \"door\", \"in\", \"a\", \"wall;\", \"but\", \"it\", \"was\", \"locked,\", \"and\", \"there\", \"was\", \"no\", \"room\", \"for\", \"a\", \"fat\", \"little\", \"rabbit\", \"to\", \"squeeze\", \"underneath.\", \"An\", \"old\", \"mouse\", \"was\", \"running\", \"in\", \"and\", \"out\", \"over\", \"the\", \"stone\", \"doorstep,\", \"carrying\", \"peas\", \"and\", \"beans\", \"to\", \"her\", \"family\", \"in\", \"the\", \"wood.\", \"Peter\", \"asked\", \"her\", \"the\", \"way\", \"to\", \"the\", \"gate,\", \"but\", \"she\", \"had\", \"such\", \"a\", \"large\", \"pea\", \"in\", \"her\", \"mouth\", \"that\", \"she\", \"could\", \"not\", \"answer.\", \"She\", \"only\", \"shook\", \"her\", \"head\", \"at\", \"him.\", \"Peter\", \"began\", \"to\", \"cry.\", \"Then\", \"he\", \"tried\", \"to\", \"find\", \"his\", \"way\", \"straight\", \"across\", \"the\", \"garden,\", \"but\", \"he\", \"became\", \"more\", \"and\", \"more\", \"puzzled.\", \"Presently,\", \"he\", \"came\", \"to\", \"a\", \"pond\", \"where\", \"Mr.\", \"McGregor\", \"filled\", \"his\", \"water-cans.\", \"A\", \"white\", \"cat\", \"was\", \"staring\", \"at\", \"some\", \"gold-fish,\", \"she\", \"sat\", \"very,\", \"very\", \"still,\", \"but\", \"now\", \"and\", \"then\", \"the\", \"tip\", \"of\", \"her\", \"tail\", \"twitched\", \"as\", \"if\", \"it\", \"were\", \"alive.\", \"Peter\", \"thought\", \"it\", \"best\", \"to\", \"go\", \"away\", \"without\", \"speaking\", \"to\", \"her;\", \"he\", \"had\", \"heard\", \"about\", \"cats\", \"from\", \"his\", \"cousin,\", \"little\", \"Benjamin\", \"Bunny.\", \"He\", \"went\", \"back\", \"towards\", \"the\", \"tool-shed,\", \"but\", \"suddenly,\", \"quite\", \"close\", \"to\", \"him,\", \"he\", \"heard\", \"the\", \"noise\", \"of\", \"a\", \"scr-r-ritch,\", \"scratch,\", \"scratch,\", \"scritch.\", \"Peter\", \"scuttered\", \"underneath\", \"the\", \"bushes.\", \"But\", \"presently,\", \"as\", \"nothing\", \"happened,\", \"he\", \"came\", \"out,\", \"and\", \"climbed\", \"upon\", \"a\", \"wheelbarrow\", \"and\", \"peeped\", \"over.\", \"The\", \"first\", \"thing\", \"he\", \"saw\", \"was\", \"Mr.\", \"McGregor\", \"hoeing\", \"onions.\", \"His\", \"back\", \"was\", \"turned\", \"towards\", \"Peter,\", \"and\", \"beyond\", \"him\", \"was\", \"the\", \"gate!\", \"Peter\", \"got\", \"down\", \"very\", \"quietly\", \"off\", \"the\", \"wheelbarrow;\", \"and\", \"started\", \"running\", \"as\", \"fast\", \"as\", \"he\", \"could\", \"go,\", \"along\", \"a\", \"straight\", \"walk\", \"behind\", \"some\", \"black-currant\", \"bushes.\", \"Mr.\", \"McGregor\", \"caught\", \"sight\", \"of\", \"him\", \"at\", \"the\", \"corner,\", \"but\", \"Peter\", \"did\", \"not\", \"care.\", \"He\", \"slipped\", \"underneath\", \"the\", \"gate,\", \"and\", \"was\", \"safe\", \"at\", \"last\", \"in\", \"the\", \"wood\", \"outside\", \"the\", \"garden.\", \"Mr.\", \"McGregor\", \"hung\", \"up\", \"the\", \"little\", \"jacket\", \"and\", \"the\", \"shoes\", \"for\", \"a\", \"scare-crow\", \"to\", \"frighten\", \"the\", \"blackbirds.\", \"Peter\", \"never\", \"stopped\", \"running\", \"or\", \"looked\", \"behind\", \"him\", \"till\", \"he\", \"got\", \"home\", \"to\", \"the\", \"big\", \"fir-tree.\", \"He\", \"was\", \"so\", \"tired\", \"that\", \"he\", \"flopped\", \"down\", \"upon\", \"the\", \"nice\", \"soft\", \"sand\", \"on\", \"the\", \"floor\", \"of\", \"the\", \"rabbit-hole\", \"and\", \"shut\", \"his\", \"eyes.\", \"His\", \"mother\", \"was\", \"busy\", \"cooking;\", \"she\", \"wondered\", \"what\", \"he\", \"had\", \"done\", \"with\", \"his\", \"clothes.\", \"It\", \"was\", \"the\", \"second\", \"little\", \"jacket\", \"and\", \"pair\", \"of\", \"shoes\", \"that\", \"Peter\", \"had\", \"lost\", \"in\", \"a\", \"Fortnight!\", \"I\", \"am\", \"sorry\", \"to\", \"say\", \"that\", \"Peter\", \"was\", \"not\", \"very\", \"well\", \"during\", \"the\", \"evening.\", \"His\", \"mother\", \"put\", \"him\", \"to\", \"bed,\", \"and\", \"made\", \"some\", \"camomile\", \"tea;\", \"and\", \"she\", \"gave\", \"a\", \"dose\", \"of\", \"it\", \"to\", \"Peter!\", \"One\", \"table-spoonful\", \"to\", \"be\", \"taken\", \"at\", \"bed-time.'\", \"But\", \"Flopsy,\", \"Mopsy,\", \"and\", \"Cotton-tail\", \"had\", \"bread\", \"and\", \"milk\", \"and\", \"blackberries\", \"for\", \"supper.\"];\n\n        // Get the container element where words will be displayed\n    const container = document.getElementById('word_display');\n    if (!container) {\n        console.error(\"Container element not found!\");\n        return;\n    }\n\n    let index = 0;\n    const displayInterval = 500;  // Display each word for 500ms\n\n    // Function to go full screen\n    function goFullScreen() {\n        const elem = document.documentElement; // Request full screen for the document\n\n        if (elem.requestFullscreen) {\n            elem.requestFullscreen(); // Standard Fullscreen API\n        } else if (elem.mozRequestFullScreen) { // Firefox\n            elem.mozRequestFullScreen();\n        } else if (elem.webkitRequestFullscreen) { // Chrome and Safari\n            elem.webkitRequestFullscreen();\n        } else if (elem.msRequestFullscreen) { // IE\n            elem.msRequestFullscreen();\n        }\n    }\n\n    // Function to display words with non-slip timing\n    function displayWords() {\n        let startTime = performance.now();  \n\n        container.style.fontSize = \"50px\";\n        \n        function loop(timestamp) {\n            const elapsed = performance.now() - startTime;\n\n            // Check if it's time to display the next word\n            if (elapsed >= displayInterval * index) {\n                container.innerHTML = words[index];  // Display the current word\n                index++;\n\n                // If all words are displayed, show the end message\n                if (index >= words.length) {\n                    container.innerHTML = \"The End!\";\n                    return;\n                }\n            }\n\n            // Continue calling the loop until all words are displayed\n            requestAnimationFrame(loop);\n        }\n\n        // Start the animation loop\n        requestAnimationFrame(loop);\n    }\n\n    // Display the \"The story is about to start\" message for 10 seconds\n    function showIntroMessage() {\n        container.innerHTML = \"The story is about to start.\";\n        setTimeout(displayWords, 10000);\n    }\n\n    // Start the full screen and experiment after the button is clicked\n    function startExperiment() {\n        goFullScreen();  // Make the experiment full screen\n        showIntroMessage();  // Show the intro message\n    }\n\n    // Event listener for the \"Start the Experiment\" button click\n    const startButton = document.getElementById('startButton');\n    startButton.addEventListener('click', function() {\n        startButton.style.display = 'none';\n        document.getElementById('instruction-container').style.display = 'none';\n        startExperiment();  // Start the full screen and the experiment\n    });"
+        }
+      ],
+      "title": "Page",
+      "_tab": "Scripts",
+      "skip": false
+    },
+    "root": {
+      "id": "root",
+      "title": "root",
+      "type": "lab.flow.Sequence",
+      "children": [
+        "1"
+      ],
+      "parameters": [],
+      "plugins": [
+        {
+          "type": "lab.plugins.Metadata"
+        }
+      ],
+      "metadata": {
+        "title": "",
+        "description": "",
+        "repository": "",
+        "contributors": ""
+      }
+    }
+  },
+  "version": [
+    20,
+    2,
+    4
+  ],
+  "files": {
+    "files": {
+      "index.html": {
+        "content": "data:text/html,%3C!doctype%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%3Ctitle%3EExperiment%3C%2Ftitle%3E%0A%20%20%3C!--%20viewport%20setup%20--%3E%0A%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%3E%0A%20%20%3C!--%20lab.js%20library%20and%20experiment%20code%20--%3E%0A%20%20%24%7B%20header%20%7D%0A%3C%2Fhead%3E%0A%3Cbody%3E%0A%20%20%3C!--%20If%20you'd%20rather%20have%20a%20container%20with%20a%20fixed%20width%0A%20%20%20%20%20%20%20and%20variable%20height%2C%20try%20removing%20the%20fullscreen%20class%20below%20--%3E%0A%20%20%3Cdiv%20class%3D%22container%20fullscreen%22%20data-labjs-section%3D%22main%22%3E%0A%20%20%20%20%3Cmain%20class%3D%22content-vertical-center%20content-horizontal-center%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Ch2%3ELoading%20Experiment%3C%2Fh2%3E%0A%20%20%20%20%20%20%20%20%3Cp%3EThe%20experiment%20is%20loading%20and%20should%20start%20in%20a%20few%20seconds%3C%2Fp%3E%0A%20%20%20%20%20%20%3C%2Fdiv%3E%0A%20%20%20%20%3C%2Fmain%3E%0A%20%20%3C%2Fdiv%3E%0A%3C%2Fbody%3E%0A%3C%2Fhtml%3E%0A",
+        "source": "library"
+      },
+      "style.css": {
+        "content": "data:text/css,%2F*%20Please%20define%20your%20custom%20styles%20here%20*%2F",
+        "source": "library"
+      },
+      "static/Peter_Rabbit.csv": {
+        "content": "data:text/csv;base64,77u/T25jZQp1cG9uCmEKdGltZQp0aGVyZQp3ZXJlCmZvdXIKbGl0dGxlClJhYmJpdHMsCmFuZAp0aGVpcgpuYW1lcwp3ZXJl4oCTCkZsb3BzeSwKTW9wc3ksCkNvdHRvbi10YWlsLAphbmQKUGV0ZXIuClRoZXkKbGl2ZWQKd2l0aAp0aGVpcgpNb3RoZXIKaW4KYQpzYW5kLWJhbmssCnVuZGVybmVhdGgKdGhlCnJvb3QKb2YKYQp2ZXJ5CmJpZwpmaXItdHJlZS4KJ05vdwpteQpkZWFycycKc2FpZApvbGQKTXJzLgpSYWJiaXQKb25lCm1vcm5pbmcsCid5b3UKbWF5CmdvCmludG8KdGhlCmZpZWxkcwpvcgpkb3duCnRoZQpsYW5lLApidXQKZG9uJ3QKZ28KaW50bwpNci4KTWNHcmVnb3IncwpnYXJkZW46CnlvdXIKRmF0aGVyCmhhZAphbgphY2NpZGVudAp0aGVyZTsKaGUKd2FzCnB1dAppbgphCnBpZQpieQpNcnMuCk1jR3JlZ29yLicKJ05vdwpydW4KYWxvbmcsCmFuZApkb24ndApnZXQKaW50bwptaXNjaGllZi4KSQphbQpnb2luZwpvdXQuJwpUaGVuCm9sZApNcnMuClJhYmJpdAp0b29rCmEKYmFza2V0CmFuZApoZXIKdW1icmVsbGEsCmFuZAp3ZW50CnRocm91Z2gKdGhlCndvb2QKdG8KdGhlCmJha2VyJ3MuClNoZQpib3VnaHQKYQpsb2FmCm9mCmJyb3duCmJyZWFkCmFuZApmaXZlCmN1cnJhbnQKYnVucy4KRmxvcHN5LApNb3BzeSwKYW5kCkNvdHRvbnRhaWwsCndobwp3ZXJlCmdvb2QKbGl0dGxlCmJ1bm5pZXMsCndlbnQKZG93bgp0aGUKbGFuZQp0bwpnYXRoZXIKYmxhY2tiZXJyaWVzOgpCdXQKUGV0ZXIsCndobwp3YXMKdmVyeQpuYXVnaHR5LApyYW4Kc3RyYWlnaHQKYXdheQp0bwpNci4KTWNHcmVnb3IncwpnYXJkZW4sCmFuZApzcXVlZXplZAp1bmRlcgp0aGUKZ2F0ZSEKRmlyc3QKaGUKYXRlCnNvbWUKbGV0dHVjZXMKYW5kCnNvbWUKRnJlbmNoCmJlYW5zOwphbmQKdGhlbgpoZQphdGUKc29tZQpyYWRpc2hlczsKQW5kCnRoZW4sCmZlZWxpbmcKcmF0aGVyCnNpY2ssCmhlCndlbnQKdG8KbG9vawpmb3IKc29tZQpwYXJzbGV5LgpCdXQKcm91bmQKdGhlCmVuZApvZgphCmN1Y3VtYmVyCmZyYW1lLAp3aG9tCnNob3VsZApoZQptZWV0CmJ1dApNci4KTWNHcmVnb3IhCk1yLgpNY0dyZWdvcgp3YXMKb24KaGlzCmhhbmRzCmFuZAprbmVlcwpwbGFudGluZwpvdXQKeW91bmcKY2FiYmFnZXMsCmJ1dApoZQpqdW1wZWQKdXAKYW5kCnJhbgphZnRlcgpQZXRlciwKd2F2aW5nCmEKcmFrZQphbmQKY2FsbGluZwpvdXQsCidTdG9wCnRoaWVmIScKUGV0ZXIKd2FzCm1vc3QKZHJlYWRmdWxseQpmcmlnaHRlbmVkOwpoZQpydXNoZWQKYWxsCm92ZXIKdGhlCmdhcmRlbiwKZm9yCmhlCmhhZApmb3Jnb3R0ZW4KdGhlCndheQpiYWNrCnRvCnRoZQpnYXRlLgpIZQpsb3N0Cm9uZQpvZgpoaXMKc2hvZXMKYW1vbmcKdGhlCmNhYmJhZ2VzLAphbmQKdGhlCm90aGVyCnNob2UKYW1vbmdzdAp0aGUKcG90YXRvZXMuCkFmdGVyCmxvc2luZwp0aGVtLApoZQpyYW4Kb24KZm91cgpsZWdzCmFuZAp3ZW50CmZhc3RlciwKc28KdGhhdApJCnRoaW5rCmhlCm1pZ2h0CmhhdmUKZ290CmF3YXkKYWx0b2dldGhlcgppZgpoZQpoYWQKbm90CnVuZm9ydHVuYXRlbHkKcnVuCmludG8KYQpnb29zZWJlcnJ5Cm5ldCwKYW5kCmdvdApjYXVnaHQKYnkKdGhlCmxhcmdlCmJ1dHRvbnMKb24KaGlzCmphY2tldC4KSXQKd2FzCmEKYmx1ZQpqYWNrZXQKd2l0aApicmFzcwpidXR0b25zLApxdWl0ZQpuZXcuClBldGVyCmdhdmUKaGltc2VsZgp1cApmb3IKbG9zdCwKYW5kCnNoZWQKYmlnCnRlYXJzOwpidXQKaGlzCnNvYnMKd2VyZQpvdmVyaGVhcmQKYnkKc29tZQpmcmllbmRseQpzcGFycm93cywKd2hvCmZsZXcKdG8KaGltCmluCmdyZWF0CmV4Y2l0ZW1lbnQsCmFuZAppbXBsb3JlZApoaW0KdG8KZXhlcnQKaGltc2VsZi4KTXIuCk1jR3JlZ29yCmNhbWUKdXAKd2l0aAphCnNpZXZlLAp3aGljaApoZQppbnRlbmRlZAp0bwpwb3AKdXBvbgp0aGUKdG9wCm9mClBldGVyOwpidXQKUGV0ZXIKd3JpZ2dsZWQKb3V0Cmp1c3QKaW4KdGltZSwKbGVhdmluZwpoaXMKamFja2V0CmJlaGluZApoaW0uCkFuZApydXNoZWQKaW50bwp0aGUKdG9vbC1zaGVkLAphbmQKanVtcGVkCmludG8KYQpjYW4uCkl0CndvdWxkCmhhdmUKYmVlbgphCmJlYXV0aWZ1bAp0aGluZwp0bwpoaWRlCmluLAppZgppdApoYWQKbm90CmhhZApzbwptdWNoCndhdGVyCmluCml0LgpNci4KTWNHcmVnb3IKd2FzCnF1aXRlCnN1cmUKdGhhdApQZXRlcgp3YXMKc29tZXdoZXJlCmluCnRoZQp0b29sLXNoZWQsCnBlcmhhcHMKaGlkZGVuCnVuZGVybmVhdGgKYQpmbG93ZXItcG90LgpIZQpiZWdhbgp0bwp0dXJuCnRoZW0Kb3ZlcgpjYXJlZnVsbHksCmxvb2tpbmcKdW5kZXIKZWFjaC4KUHJlc2VudGx5ClBldGVyCnNuZWV6ZWQtLSdLZXJ0eXNjaG9vIScKTXIuCk1jR3JlZ29yCndhcwphZnRlcgpoaW0KaW4Kbm8KdGltZS4KQW5kCnRyaWVkCnRvCnB1dApoaXMKZm9vdAp1cG9uClBldGVyLAp3aG8KanVtcGVkCm91dApvZgphCndpbmRvdywKdXBzZXR0aW5nCnRocmVlCnBsYW50cy4KVGhlCndpbmRvdwp3YXMKdG9vCnNtYWxsCmZvcgpNci4KTWNHcmVnb3IsCmFuZApoZQp3YXMKdGlyZWQKb2YKcnVubmluZwphZnRlcgpQZXRlci4KSGUKd2VudApiYWNrCnRvCmhpcwp3b3JrLgpQZXRlcgpzYXQKZG93bgp0bwpyZXN0OwpoZQp3YXMKb3V0Cm9mCmJyZWF0aAphbmQKdHJlbWJsaW5nCndpdGgKZnJpZ2h0LAphbmQKaGUKaGFkCm5vdAp0aGUKbGVhc3QKaWRlYQp3aGljaAp3YXkKdG8KZ28uCkFsc28KaGUKd2FzCnZlcnkKZGFtcAp3aXRoCnNpdHRpbmcKaW4KdGhhdApjYW4uCkFmdGVyCmEKdGltZQpoZQpiZWdhbgp0bwp3YW5kZXIKYWJvdXQsCmdvaW5nCmxpcHBpdHktLWxpcHBpdHktLW5vdAp2ZXJ5CmZhc3QsCmFuZApsb29raW5nCmFsbApyb3VuZC4KSGUKZm91bmQKYQpkb29yCmluCmEKd2FsbDsKYnV0Cml0Cndhcwpsb2NrZWQsCmFuZAp0aGVyZQp3YXMKbm8Kcm9vbQpmb3IKYQpmYXQKbGl0dGxlCnJhYmJpdAp0bwpzcXVlZXplCnVuZGVybmVhdGguCkFuCm9sZAptb3VzZQp3YXMKcnVubmluZwppbgphbmQKb3V0Cm92ZXIKdGhlCnN0b25lCmRvb3JzdGVwLApjYXJyeWluZwpwZWFzCmFuZApiZWFucwp0bwpoZXIKZmFtaWx5CmluCnRoZQp3b29kLgpQZXRlcgphc2tlZApoZXIKdGhlCndheQp0bwp0aGUKZ2F0ZSwKYnV0CnNoZQpoYWQKc3VjaAphCmxhcmdlCnBlYQppbgpoZXIKbW91dGgKdGhhdApzaGUKY291bGQKbm90CmFuc3dlci4KU2hlCm9ubHkKc2hvb2sKaGVyCmhlYWQKYXQKaGltLgpQZXRlcgpiZWdhbgp0bwpjcnkuClRoZW4KaGUKdHJpZWQKdG8KZmluZApoaXMKd2F5CnN0cmFpZ2h0CmFjcm9zcwp0aGUKZ2FyZGVuLApidXQKaGUKYmVjYW1lCm1vcmUKYW5kCm1vcmUKcHV6emxlZC4KUHJlc2VudGx5LApoZQpjYW1lCnRvCmEKcG9uZAp3aGVyZQpNci4KTWNHcmVnb3IKZmlsbGVkCmhpcwp3YXRlci1jYW5zLgpBCndoaXRlCmNhdAp3YXMKc3RhcmluZwphdApzb21lCmdvbGQtZmlzaCwKc2hlCnNhdAp2ZXJ5LAp2ZXJ5CnN0aWxsLApidXQKbm93CmFuZAp0aGVuCnRoZQp0aXAKb2YKaGVyCnRhaWwKdHdpdGNoZWQKYXMKaWYKaXQKd2VyZQphbGl2ZS4KUGV0ZXIKdGhvdWdodAppdApiZXN0CnRvCmdvCmF3YXkKd2l0aG91dApzcGVha2luZwp0bwpoZXI7CmhlCmhhZApoZWFyZAphYm91dApjYXRzCmZyb20KaGlzCmNvdXNpbiwKbGl0dGxlCkJlbmphbWluCkJ1bm55LgpIZQp3ZW50CmJhY2sKdG93YXJkcwp0aGUKdG9vbC1zaGVkLApidXQKc3VkZGVubHksCnF1aXRlCmNsb3NlCnRvCmhpbSwKaGUKaGVhcmQKdGhlCm5vaXNlCm9mCmEKaG9lLS1zY3Itci1yaXRjaCwKc2NyYXRjaCwKc2NyYXRjaCwKc2NyaXRjaC4KUGV0ZXIKc2N1dHRlcmVkCnVuZGVybmVhdGgKdGhlCmJ1c2hlcy4KQnV0CnByZXNlbnRseSwKYXMKbm90aGluZwpoYXBwZW5lZCwKaGUKY2FtZQpvdXQsCmFuZApjbGltYmVkCnVwb24KYQp3aGVlbGJhcnJvdwphbmQKcGVlcGVkCm92ZXIuClRoZQpmaXJzdAp0aGluZwpoZQpzYXcKd2FzCk1yLgpNY0dyZWdvcgpob2VpbmcKb25pb25zLgpIaXMKYmFjawp3YXMKdHVybmVkCnRvd2FyZHMKUGV0ZXIsCmFuZApiZXlvbmQKaGltCndhcwp0aGUKZ2F0ZSEKUGV0ZXIKZ290CmRvd24KdmVyeQpxdWlldGx5Cm9mZgp0aGUKd2hlZWxiYXJyb3c7CmFuZApzdGFydGVkCnJ1bm5pbmcKYXMKZmFzdAphcwpoZQpjb3VsZApnbywKYWxvbmcKYQpzdHJhaWdodAp3YWxrCmJlaGluZApzb21lCmJsYWNrLWN1cnJhbnQKYnVzaGVzLgpNci4KTWNHcmVnb3IKY2F1Z2h0CnNpZ2h0Cm9mCmhpbQphdAp0aGUKY29ybmVyLApidXQKUGV0ZXIKZGlkCm5vdApjYXJlLgpIZQpzbGlwcGVkCnVuZGVybmVhdGgKdGhlCmdhdGUsCmFuZAp3YXMKc2FmZQphdApsYXN0CmluCnRoZQp3b29kCm91dHNpZGUKdGhlCmdhcmRlbi4KTXIuCk1jR3JlZ29yCmh1bmcKdXAKdGhlCmxpdHRsZQpqYWNrZXQKYW5kCnRoZQpzaG9lcwpmb3IKYQpzY2FyZS1jcm93CnRvCmZyaWdodGVuCnRoZQpibGFja2JpcmRzLgpQZXRlcgpuZXZlcgpzdG9wcGVkCnJ1bm5pbmcKb3IKbG9va2VkCmJlaGluZApoaW0KdGlsbApoZQpnb3QKaG9tZQp0bwp0aGUKYmlnCmZpci10cmVlLgpIZQp3YXMKc28KdGlyZWQKdGhhdApoZQpmbG9wcGVkCmRvd24KdXBvbgp0aGUKbmljZQpzb2Z0CnNhbmQKb24KdGhlCmZsb29yCm9mCnRoZQpyYWJiaXQtaG9sZQphbmQKc2h1dApoaXMKZXllcy4KSGlzCm1vdGhlcgp3YXMKYnVzeQpjb29raW5nOwpzaGUKd29uZGVyZWQKd2hhdApoZQpoYWQKZG9uZQp3aXRoCmhpcwpjbG90aGVzLgpJdAp3YXMKdGhlCnNlY29uZApsaXR0bGUKamFja2V0CmFuZApwYWlyCm9mCnNob2VzCnRoYXQKUGV0ZXIKaGFkCmxvc3QKaW4KYQpGb3J0bmlnaHQhCkkKYW0Kc29ycnkKdG8Kc2F5CnRoYXQKUGV0ZXIKd2FzCm5vdAp2ZXJ5CndlbGwKZHVyaW5nCnRoZQpldmVuaW5nLgpIaXMKbW90aGVyCnB1dApoaW0KdG8KYmVkLAphbmQKbWFkZQpzb21lCmNhbW9taWxlCnRlYTsKYW5kCnNoZQpnYXZlCmEKZG9zZQpvZgppdAp0bwpQZXRlciEKJ09uZQp0YWJsZS1zcG9vbmZ1bAp0bwpiZQp0YWtlbgphdApiZWQtdGltZS4nCkJ1dApGbG9wc3ksCk1vcHN5LAphbmQKQ290dG9uLXRhaWwKaGFkCmJyZWFkCmFuZAptaWxrCmFuZApibGFja2JlcnJpZXMKZm9yCnN1cHBlci4K",
+        "source": "embedded-global",
+        "checkSum": "c2fc4a49328b7888a0a0fa797f837d61b48049ae0476a5600ae08916fe17e9be"
+      }
+    },
+    "bundledFiles": {
+      "lib/lab.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.fallback.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js": {
+        "type": "application/javascript"
+      },
+      "lib/lab.legacy.js.map": {
+        "type": "text/plain"
+      },
+      "lib/lab.css": {
+        "type": "text/css"
+      },
+      "lib/loading.svg": {
+        "type": "image/svg+xml"
+      }
+    }
+  }
+}
